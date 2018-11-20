@@ -34,8 +34,9 @@ const buildURL = (url, payload) => {
     if (url.indexOf('{') === -1) return url;
     // otherwise find key between {...} and replace this key with value from payload
     const matches = url.match(/{(.*?)}/);
-    const pathParamKey = matches[1]; // get value from payload. for ex.: "userId"
+    const pathParamKey = matches[1]; // for ex.: "userId"
     if (payload.hasOwnProperty(pathParamKey)) { // make sure payload contains pathParamKey
+        // matches[0] - for ex. "{userId}"
         return url.replace(matches[0], payload[pathParamKey]); // replace key with payload value
     }
     console.warn(`payload does not have: ${pathParamKey}`);
