@@ -1,0 +1,17 @@
+{
+  "name": "batch-editing-service",
+  "description": "Batch Editing Service",
+  "version": "1.0.0",
+  "author": "Roman Marshevskyy",
+  "main": "server.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon --use-strict server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-rate-limit": "^3.3.2",
+    "nodemon": "^1.18.6",
+    "superagent": "^4.0.0"
+  }
+}
